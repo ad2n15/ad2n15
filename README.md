@@ -15,7 +15,9 @@ genetics, single-cell genomics, and AI.
 - **AI for biology:** transformer and foundation models, and LLM agents that help with analysis
   under human oversight.
 
-### 🛡️ Featured project: [CellWarden](https://github.com/cellwarden/cellwarden)
+### ⭐ Featured projects
+
+#### 🛡️ [CellWarden](https://github.com/cellwarden/cellwarden)
 
 <a href="https://github.com/cellwarden/cellwarden"><img src="https://raw.githubusercontent.com/cellwarden/cellwarden/main/docs/logo/mark-512.png" width="72" align="left" alt="CellWarden logo"></a>
 
@@ -28,12 +30,24 @@ Mukesh Agrawal and David Williams.
 
 <br clear="left">
 
-### 🔬 Research projects
+#### 🧬 [LOY_OneK1K](https://github.com/ad2n15/LOY_Onek1k): loss of chromosome Y in single immune cells
 
-**Loss of chromosome Y across immune cell trajectories (OneK1K)**: [*Aging Cell* 2026](https://doi.org/10.1111/acel.70528) · [code](https://github.com/ad2n15/LOY_Onek1k) · [Shiny app code](https://github.com/ad2n15/LOY_OneK1K_Shiny)
-- Called loss of Y at the single-cell level in PBMC scRNA-seq from 416 donors, finding 45,304 LOY cells (8.8%).
-- Traced LOY along immune differentiation trajectories, e.g. classical → non-classical monocytes, with cell-type-specific differential expression.
-- Found aberrant *XIST* expression and upregulation of genes that escape X-inactivation. Built an interactive Shiny app to explore the results.
+The complete pipeline behind [*Aging Cell* 2026](https://doi.org/10.1111/acel.70528). It calls mosaic loss of
+chromosome Y (LOY) in individual cells from OneK1K PBMC scRNA-seq (416 donors; 45,304 LOY cells, 8.8%) and follows
+its effects along immune differentiation trajectories.
+- **Reads to cells:** Cell Ranger counting, demultiplexing of the pooled BAMs by donor (subset-bam), and velocyto
+  spliced and unspliced counts.
+- **LOY calling:** per-cell LOY calls from chromosome Y gene expression, made from both Cell Ranger and velocyto
+  output and then merged. LOY and other mosaic chromosomal alterations are also called at the donor level from SNP
+  arrays (IDAT → GTC → VCF with gtc2vcf and BCFtools, phasing, then MoChA).
+- **Downstream:** Seurat with MAST differential expression per cell type, trajectory analysis (e.g. classical →
+  non-classical monocytes) with PHATE embeddings, and X-inactivation features (*XIST*, escape genes).
+- **Reproducibility:** every step runs in Apptainer or Docker containers on HPC (Slurm), with a custom Seurat
+  container in the repo.
+- **Results:** explore them in the [interactive Shiny portal](https://lagreen.shinyapps.io/1k1kloy/)
+  ([app code](https://github.com/ad2n15/LOY_OneK1K_Shiny)).
+
+### 🔬 Research projects
 
 **Clonal haematopoiesis in UK Biobank**: [*Leukemia* 2020](https://doi.org/10.1038/s41375-020-0896-8)
 - Detected myeloid clonal haematopoiesis in 502,524 participants, combining mosaic chromosomal alterations from SNP arrays (n = 486,941) with somatic driver mutations from whole-exome sequencing (n = 49,956).
