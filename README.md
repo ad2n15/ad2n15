@@ -28,18 +28,28 @@ Mukesh Agrawal and David Williams.
 
 <br clear="left">
 
-### 📄 Selected publications
+### 🔬 Research projects
 
-- **Loss of chromosome Y associates with altered immune cell trajectories and X-inactivation features.**
-  Dawoud, Green, Rackham. *Aging Cell* (2026). [doi:10.1111/acel.70528](https://doi.org/10.1111/acel.70528)
+**Loss of chromosome Y across immune cell trajectories (OneK1K)**: [*Aging Cell* 2026](https://doi.org/10.1111/acel.70528) · [code](https://github.com/ad2n15/LOY_Onek1k) · [Shiny app code](https://github.com/ad2n15/LOY_OneK1K_Shiny)
+- Called loss of Y at the single-cell level in PBMC scRNA-seq from 416 donors, finding 45,304 LOY cells (8.8%).
+- Traced LOY along immune differentiation trajectories, e.g. classical → non-classical monocytes, with cell-type-specific differential expression.
+- Found aberrant *XIST* expression and upregulation of genes that escape X-inactivation. Built an interactive Shiny app to explore the results.
+
+**Clonal haematopoiesis in UK Biobank**: [*Leukemia* 2020](https://doi.org/10.1038/s41375-020-0896-8)
+- Detected myeloid clonal haematopoiesis in 502,524 participants, combining mosaic chromosomal alterations from SNP arrays (n = 486,941) with somatic driver mutations from whole-exome sequencing (n = 49,956).
+- Ran a GWAS that found two independent *TERT* signals and the *JAK2* 46/1 haplotype, plus association analyses with blood traits, clinical phenotypes and smoking (*ASXL1* mutations and current smoking).
+
+**Loss of Y, sex hormones and clonal haematopoiesis**: [*Science Advances* 2023](https://doi.org/10.1126/sciadv.ade9746)
+- Linked LOY in UK Biobank with serum biomarkers and found a strong association with sex hormone binding globulin (SHBG).
+- Used bidirectional Mendelian randomisation to test causality: the evidence supports SHBG → LOY, not the reverse.
+- Showed that *TET2*, *TP53* and *CBL* driver mutations are enriched in LOY cases, while *JAK2* V617F is depleted.
+
+### 📄 More publications
+
 - **Genome-wide analysis defines genetic determinants of MPN subtypes and identifies a sex-specific association at CDH22/CD40.**
   Tapper, Dawoud, Score, Cross. *Blood* (2025). [doi:10.1182/blood.2025028489](https://doi.org/10.1182/blood.2025028489)
-- **Age-related loss of chromosome Y is associated with levels of sex hormone binding globulin and clonal hematopoiesis defined by TET2, TP53, and CBL mutations.**
-  Dawoud, Tapper, Cross. *Science Advances* (2023). [doi:10.1126/sciadv.ade9746](https://doi.org/10.1126/sciadv.ade9746)
 - **Clonal myelopoiesis promotes adverse outcomes in chronic kidney disease.**
   Dawoud, Gilbert, Tapper, Cross. *Leukemia* (2022). [doi:10.1038/s41375-021-01382-3](https://doi.org/10.1038/s41375-021-01382-3)
-- **Clonal myelopoiesis in the UK Biobank cohort: ASXL1 mutations are strongly associated with smoking.**
-  *Leukemia* (2020). [doi:10.1038/s41375-020-0896-8](https://doi.org/10.1038/s41375-020-0896-8)
 - **PathPinpointR: predicting the progression of scRNA-seq samples through reference trajectories.**
   Nicholas et al. (2026, preprint). [doi:10.64898/2026.04.21.715327](https://doi.org/10.64898/2026.04.21.715327)
 
